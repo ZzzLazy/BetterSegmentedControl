@@ -13,10 +13,10 @@ extension BetterSegmentedControl {
     open class IndicatorView: UIView {
         // MARK: Properties
         let segmentMaskView = UIView()
-        var cornerRadius: CGFloat = 0.0 {
+        var sg_cornerRadius: CGFloat = 0.0 {
             didSet {
-                layer.cornerRadius = cornerRadius
-                segmentMaskView.layer.cornerRadius = cornerRadius
+                layer.cornerRadius = sg_cornerRadius
+                segmentMaskView.layer.cornerRadius = sg_cornerRadius
             }
         }
         override open var frame: CGRect {

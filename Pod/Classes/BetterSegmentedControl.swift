@@ -44,7 +44,7 @@ import UIKit
     @IBInspectable public var panningDisabled: Bool = false
     
     /// The control's and indicator's corner radii.
-    @IBInspectable public var cornerRadius: CGFloat {
+    @IBInspectable public var sg_cornerRadius: CGFloat {
         get {
             layer.cornerRadius
         }
@@ -334,7 +334,7 @@ import UIKit
             case let .backgroundColor(value):
                 backgroundColor = value
             case let .cornerRadius(value):
-                cornerRadius = value
+                sg_cornerRadius = value
             case let .animationDuration(value):
                 animationDuration = value
             case let .animationSpringDamping(value):
@@ -434,8 +434,8 @@ import UIKit
     }
     
     private func updateCornerRadii() {
-        indicatorView.cornerRadius = cornerRadius - indicatorViewInset
-        allSegmentViews.forEach { $0.layer.cornerRadius = indicatorView.cornerRadius }
+        indicatorView.sg_cornerRadius = sg_cornerRadius - indicatorViewInset
+        allSegmentViews.forEach { $0.layer.cornerRadius = indicatorView.sg_cornerRadius }
     }
     
     private func updateSegmentViewTraits() {
